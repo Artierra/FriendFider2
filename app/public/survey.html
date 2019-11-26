@@ -5,6 +5,7 @@ the user agrees or disagrees with a question -->
 
 <head>
     <!-- Required meta tags -->
+    <title>survey.friendfinder</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -12,7 +13,7 @@ the user agrees or disagrees with a question -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>survey.friendfinder</title>
+
 </head>
 
 <body>
@@ -48,7 +49,7 @@ the user agrees or disagrees with a question -->
             <p>You consider yourself to be beautiful.</p>
 
             <div class="form-group"></div>
-            <label for=""> Select an Option</label>
+            <label for="option"> Select an Option</label>
 
             <select data-placeholder="" class="chosen-select" id="question1">
                 <option value=""></option>
@@ -58,8 +59,6 @@ the user agrees or disagrees with a question -->
                 <option value="4">4-Agree</option>
                 <option value="5">5- Strongly Agree</option>
             </select>
-
-
             <br>
 
 
@@ -77,7 +76,6 @@ the user agrees or disagrees with a question -->
                     <option value="4">4-Agree</option>
                     <option value="5">5- Strongly Agree</option>
                 </select>
-
                 <br>
 
 
@@ -226,7 +224,7 @@ the user agrees or disagrees with a question -->
     <footer class="footer text-center">
         <div class="container">
             <p>
-                <a href="api/friends ">Api-friends</a> |
+                <a href="api/friends">Api-friends</a> |
                 <a href="https://github.com/Artierra/FriendFider2">GitHub Repo</a>
                 <br />
             </p>
@@ -234,7 +232,7 @@ the user agrees or disagrees with a question -->
     </footer>
 
     </div>
-    <!-- Modal after survey completion -->
+    <!-- Modal to show after survey completion -->
     <div id="bestFriendModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -252,9 +250,13 @@ the user agrees or disagrees with a question -->
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+
 
 
     <script type="text/javascript">
@@ -296,13 +298,14 @@ the user agrees or disagrees with a question -->
 
                 // Ajax call for receiving response after POST req
                 $.post(currentURL + "/api/friends", newUser, function (data) {
+                    console.log(data);
                     $("#bestFriend").text(data.name);
                     $("#bestFriendPhoto").attr("src", data.photo);
                     $("#bestFriendModal").modal("toggle");
                 });
             } else {
                 // If a required field is missing, show alert
-                alert("Survey is incomplete!");
+                alert("Please fill out all the fields!");
             }
         });
     </script>

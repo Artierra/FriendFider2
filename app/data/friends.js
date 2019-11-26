@@ -30,24 +30,14 @@ var friends = [{
     },
     {
         name: 'Jeffrey Dahmer',
-        photo: '.wikipedia.org/wiki/Jeffrey_Dahmer#/media/File:Jeffrey_Dahmer_Milwaukee_Police_1991_mugshot.jpg',
+        photo: 'https://en.wikipedia.org/wiki/Jeffrey_Dahmer#/media/File:Jeffrey_Dahmer_Milwaukee_Police_1991_mugshot.jpg',
         scores: [2, 3, 2, 3, 2, 3, 2, 3, 2, 1],
     },
     {
         name: 'Stephanie Hightower',
         photo: 'https://en.wikipedia.org/wiki/Stephanie_Hightower#/media/File:Hightower.jpg',
         scores: [1, 2, 3, 4, 5, 5, 4, 3, 2, 1, ],
-    },
-    {
-        name: 'Tom Crazy',
-        photo: '',
-        scores: [3, 3, 4, 4, 5, 5, 2, 2, 2, 1]
-    },
-    {
-        name: 'Jim Rich Billionare',
-        photo: '',
-        scores: [3, 3, 4, 4, 5, 5, 2, 2, 2, 1]
-    },
+    }
 
 ];
 

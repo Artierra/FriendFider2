@@ -10,17 +10,20 @@ var app = express();
 
 // Set our port to 8080
 var PORT = process.env.PORT || 8080
-//is it false or is it true- what does this mean?
+
 app.use(bodyParser.json());
+//is it false or is it true- what does this mean?
 app.use(bodyParser.urlencoded({
-    extended: false
+    extended: true
 }));
 app.use(bodyParser.text());
-// app.use(bodyParser.json({type: "application/vnd.api + json}));
+app.use(bodyParser.json({
+    type: "application/vnd.api+json"
+}));
 
 app.use(express.static("app/public"));
 
-// require("./app/routing/apiRoute.js")(app);
+require("./app/routing/apiRoute.js")(app);
 require("./app/routing/htmlRoutes.js")(app);
 
 app.listen(PORT, function () {
