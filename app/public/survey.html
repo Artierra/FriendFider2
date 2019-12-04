@@ -299,6 +299,7 @@ the user agrees or disagrees with a question -->
                 // Ajax call for receiving response after POST req
                 $.post(currentURL + "/api/friends", newUser, function (data) {
                     console.log(data);
+                    console.log(`current url: ${currentURL}`);
                     $("#bestFriend").text(data.name);
                     $("#bestFriendPhoto").attr("src", data.photo);
                     $("#bestFriendModal").modal("toggle");
