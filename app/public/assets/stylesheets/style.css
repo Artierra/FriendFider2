@@ -11,3 +11,25 @@ h3 {
     background-image: url("../images/adventure-backlit-dawn-dusk-207896.jpg");
     background-color: rgb(233, 224, 224)
 }
+
+.myFooter {
+    height: 50px;
+    background-color: rgb(57, 44, 2);
+    color: white;
+
+}
+
+p,
+h1,
+h2 {
+    color: rgb(228, 221, 171);
+}
+
+.jumbotron {
+    background-color: rgb(11, 51, 53)
+}
+
+h1,
+h2 {
+    text-align: center;
+}

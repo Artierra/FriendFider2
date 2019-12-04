@@ -20,7 +20,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({
     type: "application/vnd.api+json"
 }));
-
+//app.use(express.json())
 app.use(express.static("app/public"));
 
 require("./app/routing/apiRoute.js")(app);
